@@ -39,9 +39,9 @@ const MainNavbar = () => {
           )}
         </button>
         <div>
-          <NavLink className="logo" to="/">
-            <img src="" alt="logo" />
-          </NavLink>
+          {/* <NavLink className="logo" to="/">
+            <img src="https://cdn-icons-png.flaticon.com/512/3893/3893081.png" alt="logo" />
+          </NavLink> */}
           <div className="links nav-top">
             <NavLink to="/" className="nav-link">
               <FaThLarge size={ICON_SIZE} />
