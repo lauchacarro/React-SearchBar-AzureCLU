@@ -1,41 +1,25 @@
 import React, { useState } from "react";
 import Search from "../components/Search";
 import DropdownComponent from "../components/DropdownComponent";
-import { pagesList } from "../data";
-
-const responseArray = [
-  {
-    intent: "Settings",
-  },
-  {
-    intent: "Favoritos",
-  },
-  {
-    intent: "Favoritos",
-  },
-];
-
-function apiReturn() {
-  return responseArray;
-}
+import { getAzureAttempts, getPagesList } from "../api";
 
 const Home = () => {
   const [itemsList, setItemsList] = useState([]);
 
   const handleSearch = (searchTerm) => {
     if (searchTerm) {
-      const apiResponse = apiReturn();
+      const attempts = getAzureAttempts();
 
-      const matches = manageMatches(apiResponse);
+      const matches = getMatches(attempts);
       setItemsList(matches);
     } else {
       setItemsList([]);
     }
   };
 
-  const manageMatches = (responseArray) => {
+  const getMatches = (responseArray) => {
     //Importado desde src/data.js
-    const pages = pagesList;
+    const pages = getPagesList();
 
     const filteredPagesList = pages.filter((page) =>
       responseArray.some(
