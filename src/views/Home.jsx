@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import Search from "../components/Search";
 import DropdownComponent from "../components/DropdownComponent";
-import { getAzureAttempts, getPagesList } from "../api";
+import { getAzureIntents, getPagesList } from "../api";
 
 const Home = () => {
   const [itemsList, setItemsList] = useState([]);
 
   const handleSearch = (searchTerm) => {
     if (searchTerm) {
-      const attempts = getAzureAttempts();
+      getAzureIntents(searchTerm).then((intents) => {
+        const matches = getMatches(intents);
+        setItemsList(matches);
+      });
 
-      const matches = getMatches(attempts);
-      setItemsList(matches);
+      
     } else {
       setItemsList([]);
     }
@@ -23,7 +25,7 @@ const Home = () => {
 
     const filteredPagesList = pages.filter((page) =>
       responseArray.some(
-        (response) => response.intent.toLowerCase() === page.page.toLowerCase()
+        (response) => response.category.toLowerCase() === page.name.toLowerCase()
       )
     );
 

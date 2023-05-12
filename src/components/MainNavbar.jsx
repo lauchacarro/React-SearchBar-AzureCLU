@@ -9,6 +9,9 @@ import {
   FaCog,
   FaSignOutAlt,
   FaBars,
+  FaUserAlt,
+  FaLock,
+  FaMoneyBill
 } from "react-icons/fa";
 
 const MainNavbar = () => {
@@ -47,17 +50,21 @@ const MainNavbar = () => {
               <FaThLarge size={ICON_SIZE} />
               <span>Dashboard</span>
             </NavLink>
-            <NavLink to="/dashboard" className="nav-link">
-              <FaThLarge size={ICON_SIZE} />
-              <span>Dashboard</span>
+            <NavLink to="/account" className="nav-link">
+              <FaUserAlt size={ICON_SIZE} />
+              <span>Mi Cuenta</span>
             </NavLink>
-            <NavLink to="/dashboard" className="nav-link">
+            <NavLink to="/services" className="nav-link">
+              <FaMoneyBill size={ICON_SIZE} />
+              <span>Pagar Servicios</span>
+            </NavLink>
+            <NavLink to="/accesibilidad" className="nav-link">
               <FaChartBar size={ICON_SIZE} />
-              <span>Analytics </span>
+              <span>Accesibilidad </span>
             </NavLink>
-            <NavLink to="/dashboard" className="nav-link">
-              <FaShoppingCart size={ICON_SIZE} />
-              <span>Orders</span>
+            <NavLink to="/security" className="nav-link">
+              <FaLock size={ICON_SIZE} />
+              <span>Seguridad</span>
             </NavLink>
           </div>
         </div>
