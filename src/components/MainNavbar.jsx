@@ -48,7 +48,7 @@ const MainNavbar = () => {
           <div className="links nav-top">
             <NavLink to="/" className="nav-link">
               <FaThLarge size={ICON_SIZE} />
-              <span>Dashboard</span>
+              <span>Home</span>
             </NavLink>
             <NavLink to="/account" className="nav-link">
               <FaUserAlt size={ICON_SIZE} />
@@ -58,7 +58,7 @@ const MainNavbar = () => {
               <FaMoneyBill size={ICON_SIZE} />
               <span>Pagar Servicios</span>
             </NavLink>
-            <NavLink to="/accesibilidad" className="nav-link">
+            <NavLink to="/accessibility" className="nav-link">
               <FaChartBar size={ICON_SIZE} />
               <span>Accesibilidad </span>
             </NavLink>

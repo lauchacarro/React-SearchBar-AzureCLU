@@ -11,26 +11,31 @@ export function getPagesList() {
     {
       page: "Mi Cuenta",
       name: "MiCuenta",
+      url: "/account",
       icon: RiUser3Fill,
     },
     {
       page: "Accesibilidad",
       name: "Accesibilidad",
+      url: "/accessibility",
       icon: RiZoomInFill,
     },
     {
       page: "Pagar Servicios",
       name: "PagarServicios",
+      url: "/services",
       icon: RiWalletFill,
     },
     {
       page: "Soporte Tecnico",
       name: "SoporteTecnico",
+      url: "/support",
       icon: RiQuestionnaireFill,
     },
     {
       page: "Seguridad",
       name: "Seguridad",
+      url: "/security",
       icon: RiLock2Fill,
     },
   ];
